@@ -53,7 +53,7 @@ export function useMovie(query, callback) {
         controller.abort();
       };
     },
-    [query]
+    [query, callback] // ✅ این خط اصلاح شده
   );
 
   return { movies, isLoading, error };
